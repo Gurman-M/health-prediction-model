@@ -11,7 +11,7 @@
   
         <!--Question 1-->
         <div class="formbold-input-radio-wrapper">
-          <label for="ans" class="formbold-form-label">
+          <label for="q1" class="formbold-form-label">
             1. Do you have high blood pressure?
 
             <br>
@@ -23,12 +23,12 @@
   
           <div class="formbold-radio-flex">
             <div class="formbold-radio-group">
-              <label class="formbold-radio-label">
+              <label value="0" class="formbold-radio-label">
                 <input
                   class="formbold-input-radio"
                   type="radio"
-                  name="ans"
-                  id="ans"
+                  name="q1"
+                  id="q1"
                 />
                 Yes
                 <span class="formbold-radio-checkmark"></span>
@@ -36,12 +36,12 @@
             </div>
   
             <div class="formbold-radio-group">
-              <label class="formbold-radio-label">
+              <label value="1" class="formbold-radio-label">
                 <input
                   class="formbold-input-radio"
                   type="radio"
-                  name="ans"
-                  id="ans"
+                  name="q1"
+                  id="q1"
                 />
                 No
                 <span class="formbold-radio-checkmark"></span>
@@ -52,7 +52,7 @@
 
         <!--Question 2-->
         <div class="formbold-input-radio-wrapper">
-            <label for="ans" class="formbold-form-label">
+            <label for="q2" class="formbold-form-label">
               2. Do you have high cholesterol?
   
               <br>
@@ -68,8 +68,8 @@
                   <input
                     class="formbold-input-radio"
                     type="radio"
-                    name="ans"
-                    id="ans"
+                    name="q2"
+                    id="q2"
                   />
                   Yes
                   <span class="formbold-radio-checkmark"></span>
@@ -81,8 +81,8 @@
                   <input
                     class="formbold-input-radio"
                     type="radio"
-                    name="ans"
-                    id="ans"
+                    name="q2"
+                    id="q2"
                   />
                   No
                   <span class="formbold-radio-checkmark"></span>
@@ -93,7 +93,7 @@
         
         <!--Question 3-->
         <div class="formbold-input-radio-wrapper">
-            <label for="ans" class="formbold-form-label">
+            <label for="q3" class="formbold-form-label">
               3. Have you recieved a cholesterol check in the previous five years?
               <br>
             </label>
@@ -104,8 +104,8 @@
                   <input
                     class="formbold-input-radio"
                     type="radio"
-                    name="ans"
-                    id="ans"
+                    name="q3"
+                    id="q3"
                   />
                   Yes
                   <span class="formbold-radio-checkmark"></span>
@@ -117,8 +117,8 @@
                   <input
                     class="formbold-input-radio"
                     type="radio"
-                    name="ans"
-                    id="ans"
+                    name="q3"
+                    id="q3"
                   />
                   No
                   <span class="formbold-radio-checkmark"></span>
@@ -129,7 +129,7 @@
             <br>
             <!--Question 4-->
         <div class="formbold-input-radio-wrapper">
-            <label for="ans" class="formbold-form-label">
+            <label for="q4" class="formbold-form-label">
               4. What is your Body Mass Index (BMI)?
 
               <br><br>
@@ -143,7 +143,7 @@
                     class="formbold-input-radio"
                     type="radio"
                     name="ans"
-                    id="ans"
+                    id="q4"
                   />
                   Yes
                   <span class="formbold-radio-checkmark"></span>
@@ -156,7 +156,7 @@
                     class="formbold-input-radio"
                     type="radio"
                     name="ans"
-                    id="ans"
+                    id="q4"
                   />
                   No
                   <span class="formbold-radio-checkmark"></span>
@@ -351,7 +351,7 @@
                           </div>
                         </div>
   
-        <button class="formbold-btn">Submit</button>
+        <button class="formbold-btn" onclick="getAnswers()">Submit</button>
       </form>
     </div>
   </div>
@@ -506,3 +506,15 @@
       box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
     }
   </style>
+
+<script>
+    function getAnswers() {
+        console.log("Hello")
+        var answers = [];
+        for (let i = 1; i < 10; i++) {
+            var e = document.getElementById("q" + String(i));
+            var text = e.text;
+            console.log(text)
+        }
+    }
+</script>
